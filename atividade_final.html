@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade Avaliativa Final</title>
+
+    <!-- Importação JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Importação Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Importação Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Importação Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container py-3">
+
+        <div class="row bg-transparent" id="cabecalho">
+            <div class="col-md-5 my-4 bg-transparent">
+                <img src="img/ifpr.png" width="100%">
+            </div>
+
+            <div class="col-md-4 bg-transparent"></div>
+
+            <div class="col-md-3 my-4 mr-0 pl-5 bg-transparent">
+                <img src="img/mec.png" width="50%" class="ml-5">
+            </div>
+        </div>
+
+        <div class="text-center mt-3 mb-5">
+            <h3>Desenvolvimento de Sistemas para WEB, Móveis e Embarcados</h3>
+            <h3>Desenvolvimento Front-End e Single Page Application</h3>
+            <h4>Prof. Rafael Henrique Dalegrave Zottesso</h4>
+        </div>
+
+        <h2 class="text-center my-5">Atividade Avaliativa Final</h2>
+
+        <div class="row my-5 py-3 bg-secondary" id="parte1">
+            <div class="col-md-8 mx-auto">
+
+                <h3 class="border-bottom pb-2">CADASTRE O SEU CURRÍCULO</h3>
+
+                <nav class="nav justfy-content-center">
+                    <a class="nav-link active" id="inf_pessoais" href="#">Informações Pessoais</a>
+                    <a class="nav-link" id="form_academica" href="#">Formação Acadêmica</a>
+                    <a class="nav-link" id="exp_profissional" href="#">Experiências Profissionais</a>
+                    <a class="nav-link" id="login" href="#">Login</a>
+                </nav>
+                <br>
+
+                <!-- ABA DAS INFORMAÇÕES PESSOAIS -->
+                <form action="" method="" class="form" id="form_1">
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="">Data de nascimento:</label>
+                            <input type="date" id="data_nasc" name="data_nasc" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">RG:</label>
+                            <input type="text" id="rg" name="rg" class="form-control">
+                        </div>
+                        <div class="col-md">
+                            <label for="">CPF:</label>
+                            <input type="text" id="cpf" name="cpf" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="">CNH:</label>
+                            <select name="cnh" id="cnh" class="form-control">
+                                <option value="">*Categoria*</option>
+                                <option value="">A - Motocicleta</option>
+                                <option value="">AB - Carro e Moto</option>
+                                <option value="">ACC - Ciclomotor</option>
+                                <option value="">B - Carro</option>
+                                <option value="">C - Caminhão</option>
+                                <option value="">D - Ônibus</option>
+                                <option value="">E - Carreta</option>
+                                <option value="">PPD - Permissão</option>
+                            </select>
+                        </div>
+                        <div class="col-md">
+                            <label for="">Estado civil:</label>
+                            <select required name="estado_civil" id="estado_civil" class="form-control">
+                                <option value="">Solteiro</option>
+                                <option value="">Casado</option>
+                                <option value="">Separado</option>
+                                <option value="">Divorciado</option>
+                                <option value="">Viúvo</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">Filhos:</label>
+                            <select required name="filhos" id="filhos" class="form-control">
+                                <option value="">Não</option>
+                                <option value="">Sim</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Telefone:</label>
+                            <input type="text" name="telefone" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md">
+                            <label for="">Celular:</label>
+                            <input type="text" name="celular" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md">
+                            <label for="">CEP:</label>
+                            <input type="text" name="" id="cep" class="form-control">
+                        </div>
+                        <!-- <br> -->
+                        <!-- <br> -->
+                        <div class="col-md pt-2 bg-secondary">
+                            <br>
+                            <button type="button" class="btn btn-primary" id="btn-buscar">
+                                <i class="fa fa-search" aria-hidden="true"></i> Buscar CEP</button>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Endereço:</label>
+                            <input type="text" name="" id="endereco" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">N°:</label>
+                            <input type="text" name="" id="n°" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md">
+                            <label for="">Complemento:</label>
+                            <input type="text" name="" id="Complemento" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+
+                        <div class="col-md">
+                            <label for="">Bairro:</label>
+                            <input type="text" name="" id="bairro" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="">Cidade:</label>
+                            <input type="text" name="" id="cidade" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">Estado:</label>
+                            <input type="text" name="" id="estado" class="form-control obrig obg1">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">E-mail:</label>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+                        <div class="col-md-7">
+                            <label for="">Linkedin:</label>
+                            <input type="text" name="linkedin" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md bg-transparent"></div>
+                        <button type="button" class="btn btn-primary" id="btn-proximo1">Próximo</button>
+                    </div>
+                </form>
+
+                <!-- ABA DE FORMAÇÃO ACADÊMICA -->
+                <form action="" method="" class="form" id="form_2">
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Curso superior:</label>
+                            <input type="text" name="curso_superior" class="form-control obrig obg2">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="">Instituição:</label>
+                            <input type="text" name="curso_instituicao" class="form-control obrig obg2">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">Conclusão:</label>
+                            <input type="text" name="curso_conclusao" class="form-control obrig obg2">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Especialização:</label>
+                            <input type="text" name="especializacao" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="">Instituição:</label>
+                            <input type="text" name="esp_instituicao" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">Conclusão:</label>
+                            <input type="text" name="esp_conclusao" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button type="button" class="btn btn-warning" id="btn-voltar2">Voltar</button>
+                        <div class="col-md bg-transparent"></div>
+                        <button type="button" class="btn btn-primary" id="btn-proximo2">Próximo</button>
+                    </div>
+                </form>
+
+                <!-- ABA DAS EXPERIÊNCIAS PROFISSIONAIS -->
+                <form action="" method="" class="form" id="form_3">
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Empresa:</label>
+                            <input type="text" name="empresa" class="form-control obrigatorio">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="">Cargo:</label>
+                            <input type="text" name="empresa" class="form-control obrigatorio">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Descrição do cargo:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row border-bottom pb-2">
+                        <div class="col-md">
+                            <label for="">Período:</label>
+                            <input type="text" name="empresa" class="form-control obrigatorio">
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-md">
+                            <label for="">Referência:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                        <div class="col-md">
+                            <label for="">Contato:</label>
+                            <input type="text" name="empresa" class="form-control obrigatorio">
+                            <span class="text-danger"></span>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Empresa:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="">Cargo:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Descrição do cargo:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row border-bottom pb-2">
+                        <div class="col-md">
+                            <label for="">Período:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                        <div class="col-md">
+                            <label for="">Referência:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                        <div class="col-md">
+                            <label for="">Contato:</label>
+                            <input type="text" name="empresa" class="form-control">
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Empresa:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="">Cargo:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Descrição do cargo:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="">Período:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                        <div class="col-md">
+                            <label for="">Referência:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                        <div class="col-md">
+                            <label for="">Contato:</label>
+                            <input type="text" name="empresa" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button type="button" class="btn btn-warning" id="btn-voltar3">Voltar</button>
+                        <div class="col-md bg-transparent"></div>
+                        <button type="button" class="btn btn-primary" id="btn-proximo3">Próximo</button>
+                    </div>
+                </form>
+
+                <!-- ABA DAS INFORMAÇÕES DE LOGIN -->
+                <form action="" method="" class="form" id="form_4">
+
+                    <label for="">Usuário:</label>
+                    <input type="text" name="empresa" class="form-control obrigatorio">
+                    <span class="text-danger"></span>
+                    <br>
+
+                    <label for="">E-mail:</label>
+                    <input type="email" name="empresa" class="form-control obrigatorio">
+                    <span class="text-danger"></span>
+                    <br>
+
+                    <label for="">Senha:</label>
+                    <input type="password" id="senha1" name="senha1" class="form-control obrigatorio">
+                    <span class="text-danger"></span>
+                    <br>
+
+                    <label for="">Repetir senha:</label>
+                    <input type="password" id="senha2" name="senha2" class="form-control obrigatorio">
+                    <span class="text-danger"></span>
+                    <button id="btn-mostrar" type="button" class="btn btn-sm">Mostrar</button>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <button type="button" class="btn btn-warning" id="btn-voltar4">Voltar</button>
+                        <div class="col-md bg-transparent"></div>
+                        <button type="submit" class="btn btn-primary" id="btn-enviar">Cadastrar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="row my-5 py-3 bg-secondary" id="parte2">
+            <div class="col-md-6 mx-auto">
+                <h3>Parte 2</h3>
+            </div>
+        </div>
+
+        <!-- CÓDIGO DE EXECUÇÃO DAS FUNÇÕES DO JQUERY -->
+        <script>
+            $(document).ready(function () {
+                // Mensagem de Alerta
+                // alert("OK");
+
+                // EVENTOS DAS ABAS 1 a 4
+                // Esconder todos os formulários e mostrar apenas o primeiro
+                $(".form").hide();
+                $("#form_1").fadeIn(1000);
+
+                // Evento para quando clicar na aba 1...
+                $("#inf_pessoais").click(function (evento) {
+                    evento.preventDefault();
+                    // alert("Pessoal");
+                    // Esconder todos os formulários e mostrar apenas o primeiro
+                    $(".form").hide();
+                    $("#form_1").fadeIn(1000);
+                });
+
+                // Evento para quando clicar na aba 2...
+                $("#form_academica").click(function (evento) {
+                    evento.preventDefault();
+                    //  alert("Academica");
+                    // Esconder todos os formulários e mostrar apenas o segundo
+                    $(".form").hide();
+                    $("#form_2").fadeIn(1000);
+                });
+
+                // Evento para quando clicar na aba 3...
+                $("#exp_profissional").click(function (evento) {
+                    evento.preventDefault();
+                    // alert("Profissional");
+                    // Esconder todos os formulários e mostrar apenas o terceiro
+                    $(".form").hide();
+                    $("#form_3").fadeIn(1000);
+                });
+
+                // Evento para quando clicar na aba 4...
+                $("#login").click(function (def) {
+                    def.preventDefault();
+                    //  alert("Login");
+                    // Esconder todos os formulários e mostrar apenas o quarto
+                    $(".form").hide();
+                    $("#form_4").fadeIn(1000);
+                });
+
+                // EVENTO PARA BUSCAR O CEP AUTOMATICAMENTE
+                // Evento para quando clicar no botão Buscar...
+                $('#btn-buscar').click(function (def) {
+                    if ($("#cep").val() == "") {
+                        alert("É necessário informar um CEP antes de realizar a busca!");
+                        $("#cep").focus();
+                    }
+                    else {
+                        // Pegar o valor inserido no campo CEP e armazenar na variavel cep...
+                        var cep = $('#cep').val();
+                        // Pegar o endereço do Site para realizar a requisição e armazenar na variavel url...                
+                        var url = 'https://viacep.com.br/ws/';
+                        // Concatenar a URL com o CEP e com a TERMINOLOGIA do json callback e atribuir como novo valor da variavel url
+                        url = url + cep + '/json/?callback=?';
+
+                        data = null;
+                        // Pegar os dados de Retorno do JSON e interpretar
+                        $.getJSON(url, data,
+                            function (dataResposta, textStatus, jqXHR) {
+
+                                $('#endereco').val(dataResposta.logradouro);
+                                $('#bairro').val(dataResposta.bairro);
+                                $('#cidade').val(dataResposta.localidade);
+                                $('#estado').val(dataResposta.uf);
+                            }
+                        );
+
+                        // EVENTO PARA TIRAR A MENSAGEM DE SPAN QUANDO O CAMPO TIVER VALOR
+                        $(".obrig").each(function () {
+                            if ($(this).val() == "") {
+                                $(this).next("span").text("");
+                            }
+                        });
+
+                        $("#endereco").removeClass("border-danger");
+                        $("#bairro").removeClass("border-danger");
+                        $("#cidade").removeClass("border-danger");
+                        $("#estado").removeClass("border-danger");
+                        // Evento para focar o ponteiro no campo N° após inserir as informações vindas da busca do CEP...
+                        $("#n°").focus();
+                        // $("p").html("focus event triggered");
+                        def.preventDefault();
+                    }
+                    
+                    
+
+                });
+
+                // EVENTOS PARA PASSAR E VOLTAR AS PÁGINAS
+                $("#btn-proximo1").click(function () {
+                    // def.preventDefault();
+                    // alert("Próximo");                    
+
+                    // EVENTO PARA VALIDAR OS CAMPOS OBRIGATÓRIOS COM UMA MENSAGEM
+                    var cont = 0;
+                    $(".obg1").each(function () {
+                        if ($(this).val() == "") {
+                            $(this).next("span").text("Este campo é obrigatório!");
+                            // este contador valida a quantidade de campos obrigatórios sem preencher
+                            cont++;
+                        }
+                    });
+
+                        // EVENTO PARA FOCAR NOS CAMPOS OBRIGATÓRIOS
+                    $(".obg1").each(function () {
+                        if ($(this).val() == "") {
+                            $(this).focus();
+                            return false;
+                        }
+                    });
+
+                    // Se o valor do contador for igual a zero significa que nenhum campo obrigatório está vazio
+                    if (cont == 0) {
+                        // Então ele libera passar para o próximo formulário
+                        $(".form").hide();
+                        $("#form_2").fadeIn(1000);
+                    }
+
+                });
+
+                $("#btn-voltar2").click(function (def) {
+                    // def.preventDefault();
+                    // alert("Voltar");
+                    // Ação a ser executada
+                    $(".form").hide();
+                    $("#form_1").fadeIn(1000);
+                });
+
+                $("#btn-proximo2").click(function (def) {
+                    // def.preventDefault();
+                    // alert("Próximo");
+                    // Ação a ser executada
+                    $(".form").hide();
+                    $("#form_3").fadeIn(1000);
+                });
+
+                $("#btn-voltar3").click(function (def) {
+                    // def.preventDefault();
+                    // alert("Voltar");
+                    // Ação a ser executada
+                    $(".form").hide();
+                    $("#form_2").fadeIn(1000);
+                });
+
+                $("#btn-proximo3").click(function (def) {
+                    // def.preventDefault();
+                    // alert("Próximo");
+                    // Ação a ser executada
+                    $(".form").hide();
+                    $("#form_4").fadeIn(1000);
+                });
+
+                $("#btn-voltar4").click(function (def) {
+                    // def.preventDefault();
+                    // alert("Voltar");
+                    // Ação a ser executada
+                    $(".form").hide();
+                    $("#form_3").fadeIn(1000);
+                });
+
+                // EVENTO PARA MOSTRAR/ESCONDER AS SENHAS
+                $("#btn-mostrar").click(function () { // Quando clicar no botão "#btn-mostrar"
+                    // Pega o texto do botão
+                    var texto = $(this).text();
+
+                    if (texto == "Mostrar") { // Quando o texto do botão for igual a "Mostrar"
+                        $("input[name=senha1]").attr("type", "text"); // Inverte o tipo do botão para text
+                        $("input[name=senha2]").attr("type", "text");
+                        $(this).text("Esconder");
+                    }
+                    else {
+                        $("input[name=senha1]").attr("type", "password"); // Inverte o tipo do botão para password
+                        $("input[name=senha2]").attr("type", "password");
+                        $(this).text("Mostrar");
+                    }
+                });
+
+                // EVENTO DO COMPARAR SENHAS
+                $("#btn-enviar").click(function () {
+                    // alert("Cadastrado");
+                    var senha1 = $("input[name=senha1]").val(); // Pega o atributo que tem o name = senha
+                    var senha2 = $("input[name=senha2]").val();
+                    // Verifica se os valores são diferentes
+                    if (senha1 != senha2) {
+                        alert("As senhas são diferentes!");
+                        // Dá um foco no campo
+                        $("input[name=senha2]").focus();
+                        // Adiciona uma classe
+                        $("input[name=senha1]").addClass("border-danger");
+                        $("input[name=senha2]").addClass("border-danger");
+                        // def.preventDefault();
+                    }
+                    // Se os valores forem iguais...
+                    else {
+                        // Remove a classe "border-danger" se tiver
+                        // Se não tiver, o jQuery simplesmente ignora
+                        $("input[name=senha1]").removeClass("border-danger");
+                        $("input[name=senha2]").removeClass("border-danger");
+                        // def.preventDefault();
+                    }
+                });
+
+                // EVENTO DOS CAMPOS OBRIGATÓRIOS AO PERDER O FOCO
+                $(".obrig").blur(function () {
+                    if ($(this).val() == "") {
+                        $(this).addClass("border-danger");
+                    }
+                    else {
+                        $(this).removeClass("border-danger");
+                        $(this).next("span").text("");
+                    }
+                });
+
+                $(".obrig").
+
+                    // EVENTO DOS CAMPOS OBRIGATÓRIOS AO SUBMETER O FORMULÁRIO
+                    $("form").submit(function (def) {
+                        $(".obrig").each(function () {
+                            if ($(this).val() == "") {
+                                $(this).next("span").text("Este campo é obrigatório.");
+                                def.preventDefault();
+                            }
+                            else {
+                                $(this).next("span").text("");
+                            }
+                        });
+
+                    });
+            });
+        </script>
+
+</body>
+
+</html>
